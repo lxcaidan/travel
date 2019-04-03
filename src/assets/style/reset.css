@@ -1,0 +1,123 @@
+html,body,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,p,blockquote,fieldset,input,abbr,article,aside,command,details,figcaption,figure,footer,header,hgroup,mark,meter,nav,output,progress,section,summary,time,td {
+    margin: 0;
+    padding: 0
+}
+
+h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,th,figcaption {
+    font-weight: 400;
+    font-style: normal
+}
+
+fieldset,iframe {
+    border: 0
+}
+
+caption,th {
+    text-align: left
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+ul {
+    list-style: none outside
+}
+
+a,ins {
+    text-decoration: none
+}
+
+article,aside,footer,header,hgroup,nav,section,figure,figcaption,details,summary {
+    display: block
+}
+
+img,a img {
+    border: 0
+}
+
+button {
+    cursor: pointer;
+    border: 0;
+    outline: 0
+}
+
+a,button,input {
+    -webkit-tap-highlight-color: rgba(255,0,0,0)
+}
+
+body {
+    font-family: PingFangSC-Regular,Helvetica,'Heiti SC';
+    font-size: 12px;
+    line-height: 1;
+    color: #000
+}
+
+.fn-hide {
+    display: none!important
+}
+
+.fn-show {
+    display: block
+}
+
+.fn-pr {
+    position: relative
+}
+
+.fn-left {
+    float: left
+}
+
+.fn-right {
+    float: right
+}
+
+.fn-clear {
+    zoom:1
+}
+
+.fn-clear:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: '.'
+}
+
+.imgauto {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.db {
+    display: flex;
+}
+
+.v {
+    flex-direction: column
+}
+
+.fx1 {
+    flex: 1
+}
+
+.vm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vh {
+    display: flex;
+    box-align: center;
+}
+
+.text-of {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
