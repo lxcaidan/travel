@@ -1,0 +1,80 @@
+/* 设置宽高 */
+size(w, h = w)
+    width: w
+    height:h
+
+/* 文字溢出隐藏 */
+text-of()
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
+/* 单行或多行文字超出点点点 */
+text-of-more(n = 1){
+    overflow:hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: n;
+    line-clamp: n;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    display:-webkit-box;
+    display:box;
+}
+
+flx()
+    display: flex
+    if(length(arguments) > 0)
+        for i in arguments
+            if(i is wrap)
+                flex-wrap: wrap
+            if(i is reverse)
+                flex-direction: column-reverse
+            if(i is jc)
+                justify-content: center
+            if(i is v)
+                flex-direction: column
+            if(i is h)
+                flex-direction: row
+            if(i is ac)
+                align-items: center
+            if(i is as)
+                align-items: flex-start
+            if(i is ae)
+                align-items: flex-end
+            if(i is jc)
+                justify-content: center
+            if(i is js)
+                justify-content: flex-start
+            if(i is je)
+                justify-content: flex-end
+            if(i is jsb)
+                justify-content: space-between
+            if(i is jsa)
+                justify-content: space-around
+                &::before,
+                &::after
+                    content: ''
+                    display: block
+            if(i is vm)
+                justify-content: center
+                align-items: center
+
+/* 伸缩性 */
+fx(n = 1)
+	flex: n
+
+/* 图片变灰 */
+imggray()
+    -webkit-filter: grayscale(100%)
+    filter: grayscale(100%)
+    filter: gray
+
+/* 清除浮动 */
+fn-clear()
+    zoom: 1
+    &:after
+        display: block
+        visibility: hidden
+        clear: both
+        height: 0
+        content: '.'

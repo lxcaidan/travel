@@ -1,14 +1,17 @@
 <template>
     <div>
-        <div class="home">home</div>
-        <router-link to="/list">列表页</router-link>
+        <home-header></home-header>
     </div>
 </template>
 
 <script>
-/* 这是一个单文件组件 */
+import HomeHeader from './components/Header'
+
 export default {
-    name: 'Home'
+    name: 'Home',
+    components: {
+        HomeHeader
+    }
 }
 </script>
 
