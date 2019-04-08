@@ -1,13 +1,7 @@
 <template>
     <swiper class="wrapper" :options="swiperOption">
-        <swiper-slide>
-            <img src="@img/swiper_1.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="@img/swiper_2.jpg" alt="">
-        </swiper-slide>
-        <swiper-slide>
-            <img src="@img/swiper_3.jpg" alt="">
+        <swiper-slide v-for="item of swiperList" :key="item.id">
+            <img :src="item.imgUrl">
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
   </swiper>
@@ -18,6 +12,18 @@ export default {
     name: 'HomeSwiper',
     data() {
       return {
+        swiperList: [
+            {
+                'imgUrl': require("@img/swiper_1.jpg"),
+                'id': "swiper_1"
+            },{
+                'imgUrl': require("@img/swiper_2.jpg"),
+                'id': "swiper_2"
+            },{
+                'imgUrl': require("@img/swiper_3.jpg"),
+                'id': "swiper_3"
+            }
+        ],
         swiperOption: {
             pagination: ".swiper-pagination",
             loop: true
