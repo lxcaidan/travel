@@ -4,7 +4,7 @@
             <img :src="item.imgUrl">
         </swiper-slide>
         <div class="swiper-pagination"  slot="pagination"></div>
-  </swiper>
+    </swiper>
 </template>
 
 <script>

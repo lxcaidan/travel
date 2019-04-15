@@ -37,6 +37,18 @@ exports.cssLoaders = function (options) {
         }
     }
 
+    const stylusOption = {
+      // 要导入全局的文件
+      import:[
+        path.join(__dirname, "../src/assets/style/fn.styl")
+      ],
+      // 全局的路径，这个不知道干嘛的
+      paths:[
+        path.join(__dirname, "../src/assets/style/"),
+        path.join(__dirname, "../")
+      ]
+    }
+
     // generate loader string to be used with extract text plugin
     function generateLoaders(loader, loaderOptions) {
         const loaders = options.usePostCSS ? [cssLoader, postcssLoader, px2remLoader] : [cssLoader, px2remLoader]
@@ -69,8 +81,8 @@ exports.cssLoaders = function (options) {
         less: generateLoaders('less'),
         sass: generateLoaders('sass', { indentedSyntax: true }),
         scss: generateLoaders('sass'),
-        stylus: generateLoaders('stylus'),
-        styl: generateLoaders('stylus')
+        stylus: generateLoaders('stylus', stylusOption),
+        styl: generateLoaders('stylus', stylusOption)
     }
 }
 

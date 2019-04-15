@@ -32,7 +32,9 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    //自动解析确定的扩展,在引入模块时不带扩展名
+    //例如：import somejs from "@/some"
+    extensions: ['.js', '.vue', '.json', '.styl'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
@@ -77,7 +79,18 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      // 暂时留着，打包的时候好像需要用到
+      // {
+      //   test: /\.styl$/,
+      //   loader: ['style-loader', 'css-loader', 'stylus-loader']
+      // }
+      /* config.module.rule('stylus') */
+      // {
+      //   test: /\.styl$/,
+      //   loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+      //   // loader: ExtractTextPlugin.extract('style', 'css!postcss!stylus')
+      // }
     ]
   },
   node: {
