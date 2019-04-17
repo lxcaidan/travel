@@ -1,8 +1,8 @@
 <template>
     <div class="icons-wrap">
         <swiper>
-            <swiper-slide>
-            <a class="icon-area" href="javascript:;" v-for="item of iconList" :key="item.icon">
+            <swiper-slide v-for="(page, index) of pages" :key="index">
+            <a class="icon-area" href="javascript:;" v-for="item of page" :key="item.icon">
                 <span :class="['icon', item.icon]"></span>
                 <p class="desc">{{item.desc}}</p>
             </a>
@@ -44,13 +44,24 @@ export default {
                 }
             ]
         }
+    },
+    computed: {
+        pages () {
+            const pages = []
+            this.iconList.forEach((item, index) => {
+                const page = Math.floor(index / 8)
+                if(!pages[page]) pages[page] = []
+                pages[page].push(item)
+            })
+            return pages
+        }
     }
 }
 </script>
 
 <style lang="stylus" scoped>
     .icons-wrap >>> .swiper-slide
-        flx(wrap jsa)
+        flx(wrap)
     .icons-wrap
         padding: 10px
         .icon-area
@@ -69,6 +80,7 @@ export default {
         .desc
             margin-top 20px
             color: #333
+            text-of()
         .visa
             background-position: -35px -12px;/*no*/
         .abroad

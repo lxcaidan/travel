@@ -8,6 +8,11 @@ h1,h2,h3,h4,h5,h6,pre,code,address,caption,cite,code,em,th,figcaption {
     font-style: normal
 }
 
+body > #app{
+    max-width: 750px;
+    margin: 0 auto;
+}
+
 fieldset,iframe {
     border: 0
 }
