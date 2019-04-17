@@ -41,18 +41,33 @@ export default {
                 },{
                     "icon": "strategy",
                     "desc": "攻略"
+                },{
+                    "icon": "superbus",
+                    "desc": "超级巴士"
+                },{
+                    "icon": "strategy",
+                    "desc": "攻略"
                 }
             ]
         }
     },
     computed: {
         pages () {
-            const pages = []
-            this.iconList.forEach((item, index) => {
-                const page = Math.floor(index / 8)
-                if(!pages[page]) pages[page] = []
-                pages[page].push(item)
-            })
+            // 视频做法
+            // const pages = []
+            // this.iconList.forEach((item, index) => {
+            //     const page = Math.floor(index / 8)
+            //     if(!pages[page]) pages[page] = []
+            //     pages[page].push(item)
+            // })
+            // return pages
+
+            // 自己写的小方法
+            let index = 0
+            let pages = []
+            while(index < this.iconList.length){
+                pages.push(this.iconList.slice(index, index += 8))
+            }
             return pages
         }
     }
