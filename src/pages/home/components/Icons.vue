@@ -89,7 +89,7 @@ export default {
             display: inline-block
             width: 33px;/*no*/
             height: 33px;/*no*/
-            background-image: url(../../../assets/img/entrances.png)
+            background-image: url("~@img/entrances.png")
             background-size: 374px 130px;/*no*/
             background-repeat: no-repeat
         .desc
