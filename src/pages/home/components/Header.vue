@@ -2,7 +2,9 @@
     <div class="header">
         <div class="header-left icf icf-back"></div>
         <div class="header-input"><span class="icf icf-search"></span>输入城市/景点/游玩主题</div>
-        <div class="header-right">{{this.city}}<span class="icf icf-below-s"></span></div>
+        <router-link to="/city">
+            <div class="header-right">{{this.city}}<span class="icf icf-below-s"></span></div>
+        </router-link>
     </div>
 </template>
 
