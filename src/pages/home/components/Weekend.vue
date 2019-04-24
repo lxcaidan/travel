@@ -3,7 +3,7 @@
         <h3 class="weekend-tit">周边好去处</h3>
         <div class="weekend-list">
             <a class="weekend-items"
-                v-for="item of dataList"
+                v-for="item of list"
                 :key="item.id"
                 href="javascript:;">
                 <div class="mas-wrap">
@@ -21,32 +21,8 @@
 <script>
 export default {
     name: 'HomeWeekend',
-    data () {
-        return {
-            dataList: [
-                {
-                    id: "weekend-001",
-                    imgUrl: require("@img/weekend_1.png"),
-                    title: "古北水镇",
-                    desc: "北方小江南"
-                },{
-                    id: "weekend-002",
-                    imgUrl: require("@img/weekend_2.jpg"),
-                    title: "十渡",
-                    desc: "这个周末不再宅"
-                },{
-                    id: "weekend-003",
-                    imgUrl: require("@img/weekend_3.jpg"),
-                    title: "中国马镇",
-                    desc: "风吹草低见牛羊"
-                },{
-                    id: "weekend-004",
-                    imgUrl: require("@img/weekend_4.jpg"),
-                    title: "极地海洋馆",
-                    desc: "神秘梦幻海洋馆"
-                }
-            ]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
@@ -86,13 +62,13 @@ export default {
         width: 50%
         fx()
     .item-hd
-        font-size: 14px
+        font-size: 28px
         color: #212121
         text-of-more(2)
         line-height: 1.4
     .item-desc
         margin-top: 6px
-        font-size: 12px
+        font-size: 20px
         color: #616161
         line-height: 1.5
         text-of()

@@ -1,5 +1,7 @@
 <template>
-    <swiper class="wrapper" :options="swiperOption">
+    <swiper class="wrapper"
+        :options="swiperOption"
+        v-if="isShow">
         <swiper-slide v-for="item of list" :key="item.id">
             <img :src="item.imgUrl">
         </swiper-slide>
@@ -13,12 +15,18 @@ export default {
     props: {
         list: Array
     },
-    data() {
-      return {
-        swiperOption: {
-            pagination: ".swiper-pagination",
-            loop: true
+    computed: {
+        isShow () {
+            return this.list.length
         }
+    },
+    data() {
+        return {
+            swiperOption: {
+                pagination: ".swiper-pagination",
+                autoplay: 3000,
+                loop: true
+            }
       }
     }
 }
@@ -34,9 +42,10 @@ export default {
 
     .wrapper >>> .swiper-pagination-bullet-active
         background-color: #fff
-
-    .swiper-slide
+    .wrapper
         height: 192px
+    .swiper-slide
+        height: 100%
         >img
             display: block
             size(100%)

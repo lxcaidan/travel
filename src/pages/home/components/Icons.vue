@@ -1,6 +1,7 @@
 <template>
     <div class="icons-wrap">
-        <swiper>
+        <swiper
+            :options="swiperOption">
             <swiper-slide v-for="(page, index) of pages" :key="index">
             <a class="icon-area" href="javascript:;" v-for="item of page" :key="item.icon">
                 <span :class="['icon', item.icon]"></span>
@@ -14,42 +15,8 @@
 <script>
 export default {
     name: 'HomeIcons',
-    data () {
-        return {
-            iconList: [
-                {
-                    "icon": "visa",
-                    "desc": "签证 · WiFi"
-                },{
-                    "icon": "abroad",
-                    "desc": "出境游"
-                },{
-                    "icon": "onedaytour",
-                    "desc": "一日游"
-                },{
-                    "icon": "msl",
-                    "desc": "美食林"
-                },{
-                    "icon": "subbus",
-                    "desc": "汽车票"
-                },{
-                    "icon": "internal",
-                    "desc": "邮轮游"
-                },{
-                    "icon": "superbus",
-                    "desc": "超级巴士"
-                },{
-                    "icon": "strategy",
-                    "desc": "攻略"
-                },{
-                    "icon": "superbus",
-                    "desc": "超级巴士"
-                },{
-                    "icon": "strategy",
-                    "desc": "攻略"
-                }
-            ]
-        }
+    props: {
+        list: Array
     },
     computed: {
         pages () {
@@ -65,10 +32,17 @@ export default {
             // 自己写的小方法
             let index = 0
             let pages = []
-            while(index < this.iconList.length){
-                pages.push(this.iconList.slice(index, index += 8))
+            while(index < this.list.length){
+                pages.push(this.list.slice(index, index += 8))
             }
             return pages
+        }
+    },
+    data () {
+        return {
+            swiperOption: {
+                autoplay: false
+            }
         }
     }
 }
@@ -112,5 +86,5 @@ export default {
             background-position: -212px -79px;/*no*/
         .strategy
             background-position: -300px -12px;/*no*/
-        
+
 </style>

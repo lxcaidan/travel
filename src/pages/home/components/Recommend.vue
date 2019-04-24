@@ -3,7 +3,7 @@
         <h3 class="rec-tit">热销推荐</h3>
         <div class="rec-list">
             <a class="rec-items"
-                v-for="item of dataList"
+                v-for="item of list"
                 :key="item.id"
                 href="javascript:;">
                 <div class="img-wrap">
@@ -22,27 +22,8 @@
 <script>
 export default {
     name: 'HomeRecommend',
-    data () {
-        return {
-            dataList: [
-                {
-                    id: "rec-001",
-                    imgUrl: require("@img/recommend_1.jpg"),
-                    title: "错峰出游立减！①港珠澳大桥②大礼包③送深圳！港澳3日！观光+自由行+澳门",
-                    desc: "5天4晚 端午 直飞 多酒店可选"
-                },{
-                    id: "rec-002",
-                    imgUrl: require("@img/recommend_2.jpg"),
-                    title: "端午抢购！马来西亚沙巴+潜水天堂仙本娜6天/可升级水屋+可定制一日游+接送机",
-                    desc: "6天5晚 端午 直飞 多酒店可选"
-                },{
-                    id: "rec-003",
-                    imgUrl: require("@img/recommend_3.jpg"),
-                    title: "全国联运 马尔代夫中央格兰德岛 2沙2水鲸鱼探险+浮潜海钓巡航+蜜月套餐",
-                    desc: "6天4晚 端午 直飞 多机票可选 马尔代夫盛泰澜中央格兰德岛"
-                }
-            ]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
@@ -86,20 +67,20 @@ export default {
         padding-right: 20px
         fx()
     .item-hd
-        font-size: 14px
+        font-size: 26px
         color: #212121
         text-of-more(2)
         line-height: 1.4
     .item-desc
         margin: 6px 0 8px
-        font-size: 12px
+        font-size: 24px
         color: #616161
         line-height: 1.5
         text-of()
     .item-btn
         flx(vm)
         width: 160px
-        font-size: 12px
+        font-size: 24px
         color: #fff
         line-height: 40px
         border-radius: 3px
