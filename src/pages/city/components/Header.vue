@@ -36,7 +36,7 @@ export default {
         font-size: 24px
         text-align: center
     .header-search
-        padding: 8px 0
+        padding: 14px 0
         .search-input
             display: block
             height: 36px
