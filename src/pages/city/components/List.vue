@@ -10,72 +10,19 @@
             <div class="items-area">
                 <h3 class="list-hd">热门城市</h3>
                 <div class="city-list">
-                    <div class="item">北京</div>
-                    <div class="item">上海</div>
-                    <div class="item">三亚</div>
-                    <div class="item">香港</div>
-                    <div class="item">杭州</div>
-                    <div class="item">广州</div>
-                    <div class="item">成都</div>
-                    <div class="item">深圳</div>
-                    <div class="item">苏州</div>
-                    <div class="item">桂林</div>
-                    <div class="item">西安</div>
-                    <div class="item">厦门</div>
+                    <div class="item"
+                        v-for="item of hotCities"
+                        :key="item.id">{{item.name}}</div>
                 </div>
             </div>
-            <div class="list-area">
-                <h3 class="list-hd">A</h3>
+            <div class="items-area"
+                v-for="(item, key) of cities"
+                :key="key">
+                <h3 class="list-hd">{{key}}</h3>
                 <div class="city-list">
-                    <div class="item">阿坝藏族羌族自治州</div>
-                    <div class="item">阿克苏地区</div>
-                    <div class="item">阿拉尔</div>
-                    <div class="item">阿拉善盟</div>
-                </div>
-            </div>
-            <div class="list-area">
-                <h3 class="list-hd">A</h3>
-                <div class="city-list">
-                    <div class="item">阿坝藏族羌族自治州</div>
-                    <div class="item">阿克苏地区</div>
-                    <div class="item">阿拉尔</div>
-                    <div class="item">阿拉善盟</div>
-                </div>
-            </div>
-            <div class="list-area">
-                <h3 class="list-hd">A</h3>
-                <div class="city-list">
-                    <div class="item">阿坝藏族羌族自治州</div>
-                    <div class="item">阿克苏地区</div>
-                    <div class="item">阿拉尔</div>
-                    <div class="item">阿拉善盟</div>
-                </div>
-            </div>
-            <div class="list-area">
-                <h3 class="list-hd">A</h3>
-                <div class="city-list">
-                    <div class="item">阿坝藏族羌族自治州</div>
-                    <div class="item">阿克苏地区</div>
-                    <div class="item">阿拉尔</div>
-                    <div class="item">阿拉善盟</div>
-                </div>
-            </div>
-            <div class="list-area">
-                <h3 class="list-hd">A</h3>
-                <div class="city-list">
-                    <div class="item">阿坝藏族羌族自治州</div>
-                    <div class="item">阿克苏地区</div>
-                    <div class="item">阿拉尔</div>
-                    <div class="item">阿拉善盟</div>
-                </div>
-            </div>
-            <div class="list-area">
-                <h3 class="list-hd">A</h3>
-                <div class="city-list">
-                    <div class="item">阿坝藏族羌族自治州</div>
-                    <div class="item">阿克苏地区</div>
-                    <div class="item">阿拉尔</div>
-                    <div class="item">阿拉善盟</div>
+                    <div class="item"
+                        v-for="city of item"
+                        :key="city.id">{{city.name}}</div>
                 </div>
             </div>
         </div>
@@ -87,6 +34,10 @@ import BScroll from 'better-scroll'
 
 export default {
     name: "CityList",
+    props: {
+        cities: Object,
+        hotCities: Array
+    },
     mounted () {
         this.scroll = new BScroll(this.$refs.wrapper)
     }
