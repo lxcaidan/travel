@@ -7,12 +7,18 @@
         <div class="header-search">
             <input type="text" class="search-input" placeholder="输入城市或景点">
         </div>
+        <CitySearch></CitySearch>
     </div>
 </template>
 
 <script>
+import CitySearch from './Search'
+
 export default {
-    name: "CityHeader"
+    name: "CityHeader",
+    components: {
+        CitySearch
+    }
 }
 </script>
 

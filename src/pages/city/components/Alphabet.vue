@@ -49,7 +49,7 @@ export default {
                 const itemHeight = this.$refs['A'][0].clientHeight
                 const index = Math.floor((touchY - startY) / itemHeight)
                 // 视频那样做的不对的，他也是用的rem，怎么可以直接从浏览器看高度写死
-                this.$emit("change", this.letters[index])
+                if(index >= 0 && index <= 21) this.$emit("change", this.letters[index])
             }
         },
         handleTouchEnd () {
