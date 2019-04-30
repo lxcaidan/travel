@@ -5,9 +5,9 @@
         </router-link>
         <h2 class="header-hd">城市选择</h2>
         <div class="header-search">
-            <input type="text" class="search-input" placeholder="输入城市或景点">
+            <input v-model="keyword" type="text" class="search-input" placeholder="输入城市或景点">
         </div>
-        <CitySearch></CitySearch>
+        <CitySearch :list="list" v-show="keyword"></CitySearch>
     </div>
 </template>
 
@@ -16,6 +16,42 @@ import CitySearch from './Search'
 
 export default {
     name: "CityHeader",
+    props: {
+        cities: Object
+    },
+    data () {
+        return {
+            keyword: '',
+            list: [],
+            timer: null
+        }
+    },
+    watch: {
+        keyword () {
+            if (this.timer) {
+                clearTimeout(this.timer)
+            }
+
+            if (!this.keyword) {
+                this.list = []
+                return
+            }
+
+            this.timer = setTimeout(() => {
+                const result = []
+
+                for (let i in this.cities) {
+                    this.cities[i].forEach((value) => {
+                        if(value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
+                            result.push(value)
+                        }
+                    })
+                }
+
+                this.list = result
+            }, 100)
+        }
+    },
     components: {
         CitySearch
     }

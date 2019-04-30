@@ -1,9 +1,10 @@
 <template>
     <div class="list" ref="content">
         <ul>
-            <li v-for="item of letters"
+            <li v-for="(item, index) of letters"
                 :key="item"
                 :ref="item"
+                :class="{on: index == activeIndex}"
                 @click="handleLetterClick"
                 @touchstart="handleTouchStart"
                 @touchmove="handleTouchMove"
@@ -29,12 +30,13 @@ export default {
     },
     data () {
         return {
+            activeIndex: 0,
             touchStatus: false
         }
     },
     methods: {
         handleLetterClick (e) {
-            this.$emit('change', e.target.innerText)
+            this.$emit("change", e.target.innerText)
         },
         handleTouchStart () {
             this.touchStatus = true
@@ -49,7 +51,10 @@ export default {
                 const itemHeight = this.$refs['A'][0].clientHeight
                 const index = Math.floor((touchY - startY) / itemHeight)
                 // 视频那样做的不对的，他也是用的rem，怎么可以直接从浏览器看高度写死
-                if(index >= 0 && index <= 21) this.$emit("change", this.letters[index])
+                if (index >= 0 && index <= 21) {
+                    this.activeIndex = index
+                    this.$emit("change", this.letters[index])
+                }
             }
         },
         handleTouchEnd () {
@@ -72,4 +77,6 @@ export default {
             font-size: 24px
             color: #9a7e5a
             line-height: 36px
+        .on
+            color: #00bcd4
 </style>
