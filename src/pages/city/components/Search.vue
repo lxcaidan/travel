@@ -3,7 +3,8 @@
         <ul class="list-area">
             <li class="item"
                 v-for="item of list"
-                :key="item.id">{{item.name}}</li>
+                :key="item.id"
+                @click="handleCityClick(item.name)">{{item.name}}</li>
             <li class="no-result" v-show="hasNoData">没有匹配项</li>
         </ul>
     </div>
@@ -20,6 +21,12 @@ export default {
     computed: {
         hasNoData () {
             return !this.list.length
+        }
+    },
+    methods: {
+        handleCityClick (city) {
+            this.$store.commit('changeCity', city)
+            this.$router.push('/')
         }
     },
     mounted () {

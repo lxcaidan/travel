@@ -4,7 +4,7 @@
             <div class="items-area">
                 <h3 class="list-hd">当前城市</h3>
                 <div class="city-list">
-                    <div class="item">北京</div>
+                    <div class="item">{{this.$store.state.city}}</div>
                 </div>
             </div>
             <div class="items-area">
@@ -12,7 +12,8 @@
                 <div class="city-list">
                     <div class="item"
                         v-for="item of hotCities"
-                        :key="item.id">{{item.name}}</div>
+                        :key="item.id"
+                        @click="handleCityClick(item.name)">{{item.name}}</div>
                 </div>
             </div>
             <div class="items-area"
@@ -23,7 +24,8 @@
                 <div class="city-list">
                     <div class="item"
                         v-for="city of item"
-                        :key="city.id">{{city.name}}</div>
+                        :key="city.id"
+                        @click="handleCityClick(city.name)">{{city.name}}</div>
                 </div>
             </div>
         </div>
@@ -46,6 +48,13 @@ export default {
                 const elm = this.$refs[this.letter][0]
                 this.scroll.scrollToElement(elm)
             }
+        }
+    },
+    methods: {
+        handleCityClick (city) {
+            // this.$store.dispatch('changeCity', city)
+            this.$store.commit('changeCity', city)
+            this.$router.push('/')
         }
     },
     mounted () {

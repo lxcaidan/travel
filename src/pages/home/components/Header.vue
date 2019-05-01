@@ -3,7 +3,7 @@
         <div class="header-left icf icf-back"></div>
         <div class="header-input"><span class="icf icf-search"></span>输入城市/景点/游玩主题</div>
         <router-link to="/city">
-            <div class="header-right">{{this.city}}<span class="icf icf-below-s"></span></div>
+            <div class="header-right">{{this.$store.state.city}}<span class="icf icf-below-s"></span></div>
         </router-link>
     </div>
 </template>
@@ -11,10 +11,7 @@
 <script>
 /* 这是一个单文件组件 */
 export default {
-    name: 'HomeHeader',
-    props: {
-        city: String
-    }
+    name: 'HomeHeader'
 }
 </script>
 
