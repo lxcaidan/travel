@@ -1,11 +1,13 @@
 <template>
     <div class="rec-wrap">
         <h3 class="rec-tit">热销推荐</h3>
-        <div class="rec-list">
-            <a class="rec-items"
+        <ul class="rec-list">
+            <router-link
+                tag="li"
+                class="rec-items"
                 v-for="item of list"
                 :key="item.id"
-                href="javascript:;">
+                :to="'/detail/'+item.id">
                 <div class="img-wrap">
                     <img :src="item.imgUrl">
                 </div>
@@ -14,8 +16,8 @@
                     <div class="item-desc">{{item.desc}}</div>
                     <div class="item-btn">查看详情</div>
                 </div>
-            </a>
-        </div>
+            </router-link>
+        </ul>
     </div>
 </template>
 

@@ -91,6 +91,12 @@ body {
     content: '.'
 }
 
+.covimg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .imgauto {
     display: block;
     max-width: 100%;

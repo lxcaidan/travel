@@ -40,7 +40,8 @@ module.exports = {
       '@': resolve('src'),
       'style': resolve('src/assets/style'),
       'js': resolve('src/assets/js'),
-      '@img': resolve('src/assets/img')
+      '@img': resolve('src/assets/img'),
+      'common': resolve('src/common')
     }
   },
   module: {
