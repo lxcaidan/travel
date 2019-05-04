@@ -1,0 +1,65 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "赏樱VIP限定日本7天大阪+东京共2天自由活动市旺区酒店连住、富士山露天温泉",
+    "bannerImg": "https://img1.qunarzz.com/vs_ceph_vs_tts/490a37ef-14ac-419a-8f10-c228195855ed.jpg_r_640x420x90_6b02c118.jpg",
+    "gallaryImgs": [
+        "https://img1.qunarzz.com/vs_ceph_vs_tts/490a37ef-14ac-419a-8f10-c228195855ed.jpg_r_640x420x90_6b02c118.jpg",
+        "https://img1.qunarzz.com/vs_ceph_vs_tts/39370a2f-91f3-43f0-8f36-d47b8cacd056.jpeg_r_1280x840x90_2346ec67.jpeg",
+        "https://img1.qunarzz.com/vs_ceph_vs_tts/39f2dece-853a-4e4a-a3c8-fb822c417330.jpg_r_1280x840x90_aa41f97c.jpg",
+        "https://img1.qunarzz.com/p/tts5/1810/20/e9401d7243ba0002.jpg_r_1280x840x90_434de945.jpg",
+        "https://img1.qunarzz.com/p/tts6/1706/b8/6352450f040dd202.jpg_r_1280x840x90_4db30f99.jpg"
+    ],
+    "categoryList": [{
+      "title": "豪华票",
+      "children": [{
+        "title": "豪华三馆联票",
+        "children": [{
+          "title": "豪华三馆联票 - 某一连锁店销售"
+        }]
+      },{
+        "title": "豪华五馆联票"
+      }]
+    }, {
+        "title": "成人票",
+        "children": [{
+          "title": "成人三馆联票",
+          "children": [{
+            "title": "成人三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "成人五馆联票"
+        }]
+      }, {
+        "title": "学生票",
+        "children": [{
+          "title": "学生三馆联票",
+          "children": [{
+            "title": "学生三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "学生五馆联票"
+        }]
+      }, {
+        "title": "儿童票",
+        "children": [{
+          "title": "儿童三馆联票",
+          "children": [{
+            "title": "儿童三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "儿童五馆联票"
+        }]
+      }, {
+        "title": "特惠票",
+        "children": [{
+          "title": "特惠三馆联票",
+          "children": [{
+            "title": "特惠三馆联票 - 某一连锁店销售"
+          }]
+        },{
+          "title": "特惠五馆联票"
+        }]
+      }]
+  }
+}

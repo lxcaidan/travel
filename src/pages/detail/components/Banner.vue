@@ -1,27 +1,41 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="covimg" src="https://img1.qunarzz.com/vs_ceph_vs_tts/490a37ef-14ac-419a-8f10-c228195855ed.jpg_r_640x420x90_6b02c118.jpg" alt="">
+            <img class="covimg" :src="bannerImg">
             <div class="banner-info">
-                <div>产品编号 2307018750</div>
-                <div class="num">1/13<span class="icf icf-img"></span></div>
+                <div>{{sightName}}</div>
+                <div class="num" v-if="gallaryNum">{{gallaryNum}}<span class="icf icf-img"></span></div>
             </div>
         </div>
-        <common-gallary
-            :list="imgs"
-            v-show="showGallary"
-            @close="handleGallaryClose"
-            ></common-gallary>
+        <fade-animtion>
+            <common-gallary
+                :list="gallaryImg"
+                v-show="showGallary"
+                @close="handleGallaryClose"
+                ></common-gallary>
+        </fade-animtion>
     </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary'
+import FadeAnimtion from 'common/fade/FadeAnimation'
 
 export default {
     name: 'DetailBanner',
+    props: {
+        sightName: String,
+        bannerImg: String,
+        gallaryImg: Array
+    },
     components: {
-        CommonGallary
+        CommonGallary,
+        FadeAnimtion
+    },
+    computed: {
+        gallaryNum () {
+            return "1/" + this.gallaryImg.length
+        }
     },
     data () {
         return {
@@ -47,6 +61,7 @@ export default {
     .banner
         position: relative
         overflow: hidden
+        height: 504px
     .banner-img
         height: 504px
     .banner-info
