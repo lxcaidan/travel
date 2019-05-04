@@ -13,10 +13,14 @@ module.exports = {
     // webpack-dev-server 提供的 proxy 代理
     proxyTable: {
       '/api': {  //请求api目录的时候
+        /* 本地调试请求转发 */
         target: 'http://localhost:8080',  // 依然是本地路径8080端口
         pathRewrite: {
           '^/api': "/static/mock"  //请求是api开头的目录的时候，转发到/static/mock文件目录里
         }
+
+        /* 本地联调，使用了http-server */
+        // target: "http://localhost"
       }
     },
 
@@ -58,6 +62,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    /* 如果要放到服务器中的project文件夹，则需要下面更改为/project */
     assetsPublicPath: '/',
 
     /**

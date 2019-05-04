@@ -6,7 +6,7 @@
                 :ref="item"
                 :class="{on: index == activeIndex}"
                 @click="handleLetterClick"
-                @touchstart="handleTouchStart"
+                @touchstart.prevent="handleTouchStart"
                 @touchmove="handleTouchMove"
                 @touchend="handleTouchEnd">{{item}}</li>
         </ul>

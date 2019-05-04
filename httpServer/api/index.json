@@ -1,0 +1,107 @@
+{
+    "ret": true,
+    "data": {
+        "swiperList": [
+            {
+                "id": "0001",
+                "imgUrl": "//source.qunarzz.com/site/images/wns/20190416_qunar_dujia_homepage_2.jpg"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "//source.qunarzz.com/site/images/wns/20190415_qunar_dujia_homepage_top_banner_1.jpeg"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "//source.qunarzz.com/site/images/wns/20190416_qunar_dujia_homepage_6.jpg"
+            }
+        ],
+        "iconList": [
+            {
+                "icon": "visa",
+                "desc": "签证 · WiFi"
+            },
+            {
+                "icon": "abroad",
+                "desc": "出境游"
+            },
+            {
+                "icon": "onedaytour",
+                "desc": "一日游"
+            },
+            {
+                "icon": "msl",
+                "desc": "美食林"
+            },
+            {
+                "icon": "subbus",
+                "desc": "汽车票"
+            },
+            {
+                "icon": "internal",
+                "desc": "邮轮游"
+            },
+            {
+                "icon": "superbus",
+                "desc": "超级巴士"
+            },
+            {
+                "icon": "strategy",
+                "desc": "攻略"
+            },
+            {
+                "icon": "superbus",
+                "desc": "超级巴士"
+            },
+            {
+                "icon": "strategy",
+                "desc": "攻略"
+            }
+        ],
+        "recommendList": [
+            {
+                "id": "rec-001",
+                "imgUrl": "https://imgs.qunarzz.com/vs_ceph_vs_tts/a7a79132-0c9a-48fd-ab32-6537809c40c5.jpg_180x120_13fd21ec.jpg",
+                "title": "错峰出游立减！①港珠澳大桥②大礼包③送深圳！港澳3日！观光+自由行+澳门",
+                "desc": "5天4晚 端午 直飞 多酒店可选"
+            },
+            {
+                "id": "rec-002",
+                "imgUrl": "https://imgs.qunarzz.com/p/tts3/1803/e7/56563ca359962902.jpg_180x120_c7c5784f.jpg",
+                "title": "端午抢购！马来西亚沙巴+潜水天堂仙本娜6天/可升级水屋+可定制一日游+接送机",
+                "desc": "6天5晚 端午 直飞 多酒店可选"
+            },
+            {
+                "id": "rec-003",
+                "imgUrl": "https://imgs.qunarzz.com/vs_ceph_vs_tts/df7c10d7-8a90-4c98-a4e4-e4d6cb8b380d.jpg_180x120_5417169f.jpg",
+                "title": "全国联运 马尔代夫中央格兰德岛 2沙2水鲸鱼探险+浮潜海钓巡航+蜜月套餐",
+                "desc": "6天4晚 端午 直飞 多机票可选 马尔代夫盛泰澜中央格兰德岛"
+            }
+        ],
+        "weekendList": [
+            {
+                "id": "weekend-001",
+                "imgUrl": "https://imgs.qunarzz.com/vs_ceph_vs_vacation_pm/0e1f5939-2f3b-46bd-a353-11f26ef74d01.png",
+                "title": "古北水镇",
+                "desc": "北方小江南"
+            },
+            {
+                "id": "weekend-002",
+                "imgUrl": "https://imgs.qunarzz.com/sight/p0/201403/10/d2ad40c4d864de08692cae7f023c8768.jpg",
+                "title": "十渡",
+                "desc": "这个周末不再宅"
+            },
+            {
+                "id": "weekend-003",
+                "imgUrl": "https://imgs.qunarzz.com/vs_ceph_vs_vacation_dumper/005c5218-09b3-11e9-94bf-fa163e2f9b38.jpg",
+                "title": "中国马镇",
+                "desc": "风吹草低见牛羊"
+            },
+            {
+                "id": "weekend-004",
+                "imgUrl": "https://imgs.qunarzz.com/vc/cc/5d/ca/7327285c8186c37b6bb8cc1739.jpg_300x300x92.jpg",
+                "title": "极地海洋馆",
+                "desc": "神秘梦幻海洋馆"
+            }
+        ]
+    }
+}

@@ -6,6 +6,7 @@ import router from './router'
 import fastClick from 'fastClick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from "./store"
+// import 'babel-polyfill'
 import 'lib-flexible/flexible'
 import './assets/style/reset.css'
 import 'style/icon-font.styl'
